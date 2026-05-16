@@ -8,8 +8,8 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
-import type { DtResult } from '../api/fundCalculator'
-import { getMaxPeriods, rankByFinalAssets } from '../api/fundCalculator'
+import type { DtResult } from '../api/eastmoneyDtApi'
+import { getMaxPeriods, rankByFinalAssets } from '../api/eastmoneyDtApi'
 
 interface Props {
   results: DtResult[] | null

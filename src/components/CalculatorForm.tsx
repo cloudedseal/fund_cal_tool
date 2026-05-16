@@ -1,4 +1,4 @@
-import type { DtCalculatorParams } from '../api/fundCalculator'
+import type { DtCalculatorParams } from '../api/eastmoneyDtApi'
 
 export interface FormState extends DtCalculatorParams {
   monthDtDay: number

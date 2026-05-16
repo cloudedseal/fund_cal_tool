@@ -3,7 +3,7 @@ import {
   fetchDtCalculator,
   scanMonthDays,
   type DtResult,
-} from './api/fundCalculator'
+} from './api/eastmoneyDtApi'
 import { CalculatorForm, type FormState } from './components/CalculatorForm'
 import { DayScanPanel } from './components/DayScanPanel'
 import { DtRecordsTable } from './components/DtRecordsTable'

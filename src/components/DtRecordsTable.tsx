@@ -1,4 +1,4 @@
-import type { DtResult } from '../api/fundCalculator'
+import type { DtResult } from '../api/eastmoneyDtApi'
 
 interface Props {
   result: DtResult | null
