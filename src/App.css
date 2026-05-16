@@ -1,0 +1,269 @@
+.app {
+  text-align: left;
+  padding: 0 24px 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.app-header {
+  text-align: center;
+  padding: 32px 0 24px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  font-size: 28px;
+  margin: 0 0 8px;
+  color: #c41230;
+  letter-spacing: 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.subtitle a {
+  color: #0066cc;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.panel h2 {
+  font-size: 18px;
+  margin: 0 0 16px;
+  color: #333;
+  border-left: 4px solid #c41230;
+  padding-left: 10px;
+}
+
+.panel-sub {
+  font-size: 13px;
+  color: #888;
+  margin: -8px 0 16px;
+}
+
+.calc-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.calc-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.calc-form label span {
+  color: #555;
+}
+
+.calc-form input,
+.calc-form select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.checkbox-label {
+  flex-direction: row !important;
+  align-items: center;
+  grid-column: 1 / -1;
+}
+
+.checkbox-label input {
+  width: auto;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.form-actions button {
+  padding: 10px 24px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #c41230;
+  color: #fff;
+}
+
+.form-actions button:hover:not(:disabled) {
+  background: #a30f28;
+}
+
+.form-actions button.secondary {
+  background: #fff;
+  color: #c41230;
+  border: 1px solid #c41230;
+}
+
+.form-actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #c41230;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.hint {
+  color: #888;
+  font-size: 14px;
+}
+
+.summary-table,
+.records-table,
+.rank-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.summary-table th,
+.summary-table td,
+.records-table th,
+.records-table td,
+.rank-table th,
+.rank-table td {
+  border: 1px solid #e8e8e8;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.summary-table th,
+.rank-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #c41230;
+  font-weight: 600;
+}
+
+.extra-metric {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #555;
+}
+
+.table-scroll {
+  max-height: 320px;
+  overflow: auto;
+}
+
+.best-banner {
+  background: #fff8f0;
+  border: 1px solid #ffd591;
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.best-banner strong {
+  color: #c41230;
+  font-size: 16px;
+}
+
+.vs-current {
+  color: #666;
+}
+
+.warn {
+  font-size: 13px;
+  color: #d48806;
+  background: #fffbe6;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.chart-wrap {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #c41230;
+  transition: width 0.2s;
+}
+
+.rank-table .row-best {
+  background: #fff1f0;
+}
+
+.rank-table .row-selected {
+  background: #e6f7ff;
+}
+
+.rank-table .row-uneven {
+  color: #999;
+  font-size: 13px;
+}
+
+.app-footer {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+@media (prefers-color-scheme: dark) {
+  .panel {
+    background: #1f2028;
+    border-color: #2e303a;
+  }
+
+  .panel h2 {
+    color: #f3f4f6;
+  }
+
+  .calc-form input,
+  .calc-form select {
+    background: #16171d;
+    border-color: #2e303a;
+    color: #f3f4f6;
+  }
+
+  .summary-table th,
+  .rank-table th {
+    background: #2e303a;
+  }
+}
