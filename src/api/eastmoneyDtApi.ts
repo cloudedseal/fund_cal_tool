@@ -10,7 +10,8 @@
 export const EASTMONEY_DT_API_BASE =
   'https://fundcomapi.tiantianfunds.com/mm/FundCalculate'
 
-export const EASTMONEY_DT_CALCULATOR_PATH = '/fundDtCalculator'
+/** 完整路径，勿省略 /mm/FundCalculate */
+export const EASTMONEY_DT_CALCULATOR_PATH = '/mm/FundCalculate/fundDtCalculator'
 
 export const EASTMONEY_PAGE_ORIGIN = 'https://data.eastmoney.com'
 
