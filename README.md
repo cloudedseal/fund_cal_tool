@@ -53,6 +53,21 @@ curl 'https://fundcomapi.tiantianfunds.com/mm/FundCalculate/fundDtCalculator?fco
 
 扫描结果应与直接调用 API 一致（同等期数下最优约为每月 20 日）。
 
+## 部署到 Vercel
+
+生产环境没有 Vite 代理，使用 `api/eastmoney/[...path].ts` 服务端转发天天基金 API。
+
+```bash
+# 推送到 GitHub 后 Vercel 自动部署，或：
+npx vercel
+```
+
+部署后请求形如：
+
+```
+GET https://你的域名.vercel.app/api/eastmoney/mm/FundCalculate/fundDtCalculator?fcode=...
+```
+
 ## 说明
 
 计算结果仅供参考，不构成投资建议。
