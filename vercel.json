@@ -3,7 +3,7 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/api/eastmoney/:path*",
+      "source": "/api/eastmoney/mm/:path*",
       "destination": "https://fundcomapi.tiantianfunds.com/mm/:path*"
     },
     {
