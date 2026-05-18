@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/api/eastmoney/:path*",
-      "destination": "https://fundcomapi.tiantianfunds.com/:path*"
+      "destination": "https://fundcomapi.tiantianfunds.com/mm/:path*"
     },
     {
       "source": "/(.*)",
