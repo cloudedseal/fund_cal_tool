@@ -55,17 +55,18 @@ curl 'https://fundcomapi.tiantianfunds.com/mm/FundCalculate/fundDtCalculator?fco
 
 ## 部署到 Vercel
 
-生产环境没有 Vite 代理，使用 `api/eastmoney/[...path].ts` 服务端转发天天基金 API。
+生产环境没有 Vite 代理。`vercel.json` 将同域 `/api/eastmoney/*` **透明转发**到天天基金：
+
+```
+浏览器/curl  →  https://你的域名.vercel.app/api/eastmoney/mm/FundCalculate/fundDtCalculator?...
+                    ↓ (Vercel rewrite)
+               https://fundcomapi.tiantianfunds.com/mm/FundCalculate/fundDtCalculator?...
+```
+
+前端 URL **不会**变成天天基金域名，这是正常的（避免 CORS）。
 
 ```bash
-# 推送到 GitHub 后 Vercel 自动部署，或：
-npx vercel
-```
-
-部署后请求形如：
-
-```
-GET https://你的域名.vercel.app/api/eastmoney/mm/FundCalculate/fundDtCalculator?fcode=...
+git push origin main   # Vercel 自动重新部署
 ```
 
 ## 说明

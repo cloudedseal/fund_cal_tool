@@ -3,7 +3,8 @@
  * 页面: https://data.eastmoney.com/money/calc/FundCalcDTSY.html
  * 接口: https://fundcomapi.tiantianfunds.com/mm/FundCalculate/fundDtCalculator
  *
- * 开发环境经 Vite 代理转发，并附带与官网一致的 Origin / Referer。
+ * 开发环境：Vite 代理 `/api/eastmoney` → 天天基金
+ * 生产环境（Vercel）：`vercel.json` rewrite 同上路径到天天基金
  */
 
 /** 与东财页面一致的接口根路径 */
